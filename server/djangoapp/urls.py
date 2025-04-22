@@ -12,5 +12,6 @@ urlpatterns = [
     path(route='logout', view=views.logout_request, name='logout'),
 
     # path for add a review view
+    path(route='register', view=views.registration, name='register'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

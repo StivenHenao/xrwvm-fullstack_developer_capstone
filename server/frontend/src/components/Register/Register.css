@@ -1,65 +1,108 @@
-.register_container{
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  margin-top: 2%;
-  background-color: darkturquoise;
-  min-width: 350px;
-  width: 30%;
+/* General */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://platform.cstatic-images.com/in/v2/dealer_media/285aa0d5-8574-5d35-a4ac-f1506fe10e05/ec9b9741b930742f774eca963f0fd8f6.jpg') center/cover no-repeat;
+  background-attachment: fixed;
 }
 
-.inputs{
+/* Register Container */
+.register_container {
+  background: rgba(0, 0, 0, 0.3); /* glass effect */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 500px;
+  margin: 60px auto;
+  color: #ffffff;
+}
+
+/* Header */
+.header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 
-.input{
-  display: flex;
-  flex-direction:row;
-  align-items: center;
+.text {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-.input_field{
-  height:40px;
-  width:200px;
-  margin:.5cm;
-  font-size: medium;
-}
-
-.submit_panel{
-  display: flex;
-  flex-direction:column;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-.submit{
-  margin-left: 30%;
-  margin-right: 30%;
+.close_button {
+  background: none;
+  border: none;
   cursor: pointer;
-  font-size: large;
-  color: rgb(97, 64, 128);
-  border-radius: 10px;
-  height:50px;
+}
+
+.close_button img {
+  width: 25px;
+  filter: brightness(0) invert(1);
+}
+
+/* Form inputs */
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px 15px;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+}
+
+.input:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.input_field {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.input_field::placeholder {
+  color: #ccc;
+}
+
+.img_icon {
+    width: 20px;
+    height: auto;
+    display: inline-block;
+  }
+
+/* Submit */
+.submit_panel {
+  margin-top: 25px;
+}
+
+.submit {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background-color: #00bcd4;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 .submit:hover {
-  background-color: wheat;
-}
-
-.header{
-  font: 4em sans-serif;
-  color: white;
-  margin: .5cm;
-}
-
-.img_icon{
-  width:40px;
-  margin:.1cm;
-  background-color:#0C9;
-  color:#FFF;
-  border-radius:50px;
-  text-align:center;
-  box-shadow: 2px 2px 3px #999;  
+  background-color: #0097a7;
 }
