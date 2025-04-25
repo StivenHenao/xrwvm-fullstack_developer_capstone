@@ -71,58 +71,60 @@ const Register = () => {
   };
 
   return (
-    <div className="register_container">
-      <div className="header">
-        <span className="title">Sign Up</span>
-        <button className="close_button" onClick={goHome}>
-          <img src="https://flaticons.net/icon.php?slug_category=mobile-application&slug_icon=close" alt="Close" />
-        </button>
-      </div>
-      <hr />
-
-      <form onSubmit={register} className="register_form">
-        <InputField 
-          icon={user_icon} 
-          name="userName" 
-          placeholder="Username" 
-          value={formData.userName}
-          onChange={handleChange}
-        />
-        <InputField 
-          icon={user_icon} 
-          name="firstName" 
-          placeholder="First Name" 
-          value={formData.firstName}
-          onChange={handleChange}
-        />
-        <InputField 
-          icon={user_icon} 
-          name="lastName" 
-          placeholder="Last Name" 
-          value={formData.lastName}
-          onChange={handleChange}
-        />
-        <InputField 
-          icon={email_icon} 
-          name="email" 
-          type="email" 
-          placeholder="Email" 
-          value={formData.email}
-          onChange={handleChange}
-        />
-        <InputField 
-          icon={password_icon} 
-          name="password" 
-          type="password" 
-          placeholder="Password" 
-          value={formData.password}
-          onChange={handleChange}
-        />
-
-        <div className="submit_panel">
-          <input className="submit" type="submit" value="Register" />
+    <div className="register_page">
+      <div className="register_container">
+        <div className="header">
+          <span className="title">Sign Up</span>
+          <button className="close_button" onClick={goHome}>
+            <img src="https://flaticons.net/icon.php?slug_category=mobile-application&slug_icon=close" alt="Close" />
+          </button>
         </div>
-      </form>
+        <hr />
+
+        <form onSubmit={register} className="register_form">
+          <InputField 
+            icon={user_icon} 
+            name="userName" 
+            placeholder="Username" 
+            value={formData.userName}
+            onChange={handleChange}
+          />
+          <InputField 
+            icon={user_icon} 
+            name="firstName" 
+            placeholder="First Name" 
+            value={formData.firstName}
+            onChange={handleChange}
+          />
+          <InputField 
+            icon={user_icon} 
+            name="lastName" 
+            placeholder="Last Name" 
+            value={formData.lastName}
+            onChange={handleChange}
+          />
+          <InputField 
+            icon={email_icon} 
+            name="email" 
+            type="email" 
+            placeholder="Email" 
+            value={formData.email}
+            onChange={handleChange}
+          />
+          <InputField 
+            icon={password_icon} 
+            name="password" 
+            type="password" 
+            placeholder="Password" 
+            value={formData.password}
+            onChange={handleChange}
+          />
+
+          <div className="submit_panel">
+            <input className="submit" type="submit" value="Register" />
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

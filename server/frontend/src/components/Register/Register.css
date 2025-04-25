@@ -1,11 +1,14 @@
-/* General */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url('https://platform.cstatic-images.com/in/v2/dealer_media/285aa0d5-8574-5d35-a4ac-f1506fe10e05/ec9b9741b930742f774eca963f0fd8f6.jpg') center/cover no-repeat;
-  background-attachment: fixed;
-}
-
+/* Register Page*/
+.register_page {
+    min-height: 100vh; /* altura mínima igual a la pantalla */
+    width: 100%; /* ocupa todo el ancho */
+    background: url('https://platform.cstatic-images.com/in/v2/dealer_media/285aa0d5-8574-5d35-a4ac-f1506fe10e05/ec9b9741b930742f774eca963f0fd8f6.jpg') center center / cover no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 /* Register Container */
 .register_container {
   background: rgba(0, 0, 0, 0.3); /* glass effect */
