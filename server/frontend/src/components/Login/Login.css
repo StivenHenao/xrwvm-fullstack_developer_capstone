@@ -1,86 +1,114 @@
-.navcontainer{
-  display: flex;
-  flex: 1;
-
-  flex-direction: row;
-  margin: auto;
-  margin-top: 2%;
-  background-color: rgb(97, 64, 128);
-  align-items: flex-start;
-}
-
-.navitems{
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-  flex: 1;
-  justify-content: flex-start;
-  justify-self: center;
-}
-
-.nav_item{
-  margin-left:15px;
-  font-size: 20px;
-  color: azure;
-  align-self: center;
-}
-
-.input_panel {
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-  flex: 1;
-  justify-content: flex-end;
-  justify-self: center;
-}
-
-.input_field{
-  height:40px;
-  width:200px; 
-  font-size: medium;
-  margin:.5cm;
-}
-
-
-.action_button{
-  cursor: pointer;
-  font-size: large;
-  color: rgb(97, 64, 128);
-  border-radius: 10px;
-  height:40px;
-  padding-left:.5cm;
-  padding-right: .5cm;
-  margin: .5cm;
-}
-
-.submit:hover {
-  background-color: wheat;
-}
-
-.small_header{
-  font: 30px sans-serif;
-  color:azure;
-  margin: .5cm;
-}
-
-.username{
-  font: 30px sans-serif;
-  color:azure;
-  margin: .5cm;
-  justify-content: 'flex-end';
-  align-self:flex-end;
-}
-
-.login_panel {
-  display: flex;
-  flex-direction: column;
-  margin:auto;
-  margin: 0 auto;
-  width: 50%; 
-  padding: 20px;
-  flex: 1;
-  justify-content:center;
-  align-items: center;
-  vertical-align: middle;
+.navcontainer {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 2%;
+    background-color: rgb(97, 64, 128);
+    align-items: center;
+    padding: 10px 20px;
+  }
   
-}
+  .navitems {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    flex: 1;
+    justify-content: flex-start;
+  }
+  
+  .nav_item {
+    margin-left: 15px;
+    font-size: 20px;
+    color: azure;
+    align-self: center;
+  }
+  
+  .input_panel {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    flex: 1;
+    justify-content: flex-end;
+  }
+  
+  .login_input_field {
+    height: 40px;
+    width: 250px;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 0 15px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+  
+  .login_input_field:focus {
+    outline: none;
+    border-color: rgb(97, 64, 128);
+    box-shadow: 0 0 8px rgba(97, 64, 128, 0.3);
+  }
+  
+  .login_input_field::placeholder {
+    color: #aaa;
+  }
+  
+  .action_button {
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(97, 64, 128);
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+    padding: 0 20px;
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .action_button:hover {
+    background-color: rgb(130, 87, 159);
+    transform: scale(1.05);
+  }
+  
+  .small_header {
+    font-size: 30px;
+    color: azure;
+    margin: 10px;
+  }
+  
+  .username {
+    font-size: 30px;
+    color: azure;
+    margin: 10px;
+    justify-content: flex-end;
+    align-self: flex-end;
+  }
+  
+  .login_panel {
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    width: 350px;
+    padding: 40px 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loginlink {
+    margin-top: 15px;
+    font-size: 14px;
+    color: rgb(97, 64, 128);
+    text-decoration: none;
+  }
+  
+  .loginlink:hover {
+    text-decoration: underline;
+  }
+  
