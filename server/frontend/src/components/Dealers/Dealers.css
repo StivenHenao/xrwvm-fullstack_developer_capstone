@@ -86,3 +86,26 @@ table{
   transform: scale(1.1);
   border: solid lightgray;
 }
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form_group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #000;
+}
+
+.form_group input,
+.form_group textarea,
+.form_group select {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  color: #000;
+}

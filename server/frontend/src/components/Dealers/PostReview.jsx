@@ -92,30 +92,38 @@ const PostReview = () => {
 
   return (
     <div>
-      <Header/>
-      <div  style={{margin:"5%"}}>
-      <h1 style={{color:"darkblue"}}>{dealer.full_name}</h1>
-      <textarea id='review' cols='50' rows='7' onChange={(e) => setReview(e.target.value)}></textarea>
-      <div className='input_field'>
-      Purchase Date <input type="date" onChange={(e) => setDate(e.target.value)}/>
-      </div>
-      <div className='input_field'>
-      Car Make 
-      <select name="cars" id="cars" onChange={(e) => setModel(e.target.value)}>
-      <option value="" selected disabled hidden>Choose Car Make and Model</option>
-      {carmodels.map(carmodel => (
-          <option value={carmodel.CarMake+" "+carmodel.CarModel}>{carmodel.CarMake} {carmodel.CarModel}</option>
-      ))}
-      </select>        
-      </div >
+    <Header />
+    <div style={{ margin: "5%" }}>
+        <h1 style={{ color: "darkblue" }}>{dealer.full_name}</h1>
 
-      <div className='input_field'>
-      Car Year <input type="int" onChange={(e) => setYear(e.target.value)} max={2023} min={2015}/>
-      </div>
+        <div className="form_group">
+        <label>Review</label>
+        <textarea id="review" cols="50" rows="7" onChange={(e) => setReview(e.target.value)} />
+        </div>
 
-      <div>
-      <button className='postreview' onClick={postreview}>Post Review</button>
-      </div>
+        <div className="form_group">
+        <label>Purchase Date</label>
+        <input type="date" onChange={(e) => setDate(e.target.value)} />
+        </div>
+
+        <div className="form_group">
+        <label>Car Make and Model</label>
+        <select onChange={(e) => setModel(e.target.value)}>
+            <option value="" disabled selected hidden>Choose Car Make and Model</option>
+            {carmodels.map(carmodel => (
+            <option key={carmodel.CarMake + carmodel.CarModel} value={carmodel.CarMake + " " + carmodel.CarModel}>
+                {carmodel.CarMake} {carmodel.CarModel}
+            </option>
+            ))}
+        </select>
+        </div>
+
+        <div className="form_group">
+        <label>Car Year</label>
+        <input type="number" onChange={(e) => setYear(e.target.value)} max={2023} min={2015} />
+        </div>
+
+        <button className="postreview" onClick={postreview}>Post Review</button>
     </div>
     </div>
   )
